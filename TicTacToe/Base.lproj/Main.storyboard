@@ -1,24 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn: X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxd-z5-dam">
+                                <rect key="frame" x="53" y="153" width="245.5" height="76"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RD-0w-tI5">
+                                <rect key="frame" x="23.5" y="229" width="367" height="400"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-Iq-JPK">
+                                        <rect key="frame" x="244" y="40" width="5" height="360"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.75294119120000003" green="0.6784313917" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lT-Pc-9T3">
+                                        <rect key="frame" x="117" y="40" width="5" height="360"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.77647060160000003" green="0.70980393890000004" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsk-7O-rMn">
+                                        <rect key="frame" x="17" y="285" width="330" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.71764707569999997" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mym-Kc-3ch">
+                                        <rect key="frame" x="18" y="160" width="330" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.87058818339999999" green="0.77254903320000001" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOJ-hE-IiU">
+                                        <rect key="frame" x="17" y="40" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhK-ZQ-6jO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsH-4l-uhu">
+                                        <rect key="frame" x="138" y="38" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RyA-dv-1p9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCQ-dw-R3U">
+                                        <rect key="frame" x="269" y="40" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIx-aJ-AKI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1B-ey-OcI">
+                                        <rect key="frame" x="19" y="173" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCH-ip-oQh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM2-hE-Qum">
+                                        <rect key="frame" x="138" y="170" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBi-p8-gik"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukD-ye-uhZ">
+                                        <rect key="frame" x="257" y="298" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPS-vi-YUi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaL-EM-iL2">
+                                        <rect key="frame" x="138" y="298" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYz-rS-23L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9l-5x-ahU">
+                                        <rect key="frame" x="19" y="298" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNi-zS-57d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbe-7N-DWH">
+                                        <rect key="frame" x="257" y="169" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="X"/>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kw8-fx-BUQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="WK5-r2-nom"/>
+                                    <constraint firstAttribute="width" constant="367" id="zOg-DF-MR9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCl-qp-obg">
+                                <rect key="frame" x="25" y="50" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="aYT-PH-cGg"/>
+                                    <constraint firstAttribute="width" constant="88" id="zrk-WW-mGJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="chooseIconForX:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4A-W3-K9g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04a-ON-qwc">
+                                <rect key="frame" x="301" y="50" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="2zQ-mK-QKU"/>
+                                    <constraint firstAttribute="width" constant="88" id="Jg6-YC-zfp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="O"/>
+                                <connections>
+                                    <action selector="chooseIconForO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Grd-ik-Gkn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-Su-6lk">
+                                <rect key="frame" x="160" y="733" width="94" height="84"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="70"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sap-eT-nB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pxd-z5-dam" secondAttribute="trailing" constant="53" id="A9N-Qs-Dco"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04a-ON-qwc" secondAttribute="trailing" constant="25" id="Gbw-j6-UZa"/>
+                            <constraint firstItem="5RD-0w-tI5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.446429" id="GzO-LV-ogs"/>
+                            <constraint firstItem="GKS-Su-6lk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="Kc1-Q1-KUg"/>
+                            <constraint firstItem="Pxd-z5-dam" firstAttribute="top" secondItem="xCl-qp-obg" secondAttribute="bottom" constant="15" id="S1R-t3-wTr"/>
+                            <constraint firstItem="04a-ON-qwc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="S1U-Xv-LRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GKS-Su-6lk" secondAttribute="bottom" constant="45" id="SMq-iw-Qhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5RD-0w-tI5" secondAttribute="trailing" constant="23.5" id="UU6-Jj-Ys2"/>
+                            <constraint firstItem="Pxd-z5-dam" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.592995" id="Yhc-Gg-XVW"/>
+                            <constraint firstItem="GKS-Su-6lk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.227053" id="Zxp-ga-XFr"/>
+                            <constraint firstItem="5RD-0w-tI5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23.5" id="a3i-Uv-VU2"/>
+                            <constraint firstItem="Pxd-z5-dam" firstAttribute="top" secondItem="04a-ON-qwc" secondAttribute="bottom" constant="15" id="aqx-Yg-XFk"/>
+                            <constraint firstItem="Pxd-z5-dam" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="cfy-kS-KAk"/>
+                            <constraint firstItem="xCl-qp-obg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dOJ-OS-9Ct"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5RD-0w-tI5" secondAttribute="bottom" constant="233" id="e8w-bl-NKN"/>
+                            <constraint firstItem="5RD-0w-tI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nCz-zs-YFH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04a-ON-qwc" secondAttribute="trailing" constant="25" id="pFL-Xk-4eN"/>
+                            <constraint firstItem="xCl-qp-obg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="q2u-Gg-jR0"/>
+                            <constraint firstItem="GKS-Su-6lk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09375" id="rwY-1N-4pn"/>
+                            <constraint firstItem="Pxd-z5-dam" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0848214" id="yfF-ga-yIN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstUpView" destination="6lT-Pc-9T3" id="lZp-Tk-of0"/>
+                        <outlet property="fourDownView" destination="Gsk-7O-rMn" id="zdZ-3N-LTT"/>
+                        <outlet property="resetBtn" destination="GKS-Su-6lk" id="Ule-5A-NQS"/>
+                        <outlet property="secondUpView" destination="ze6-Iq-JPK" id="kwH-Q2-nkt"/>
+                        <outlet property="thirdDownView" destination="mym-Kc-3ch" id="bne-vQ-fqv"/>
+                        <outlet property="turnLabel" destination="Pxd-z5-dam" id="7DM-y8-oR9"/>
+                        <outletCollection property="buttons" destination="zOJ-hE-IiU" collectionClass="NSMutableArray" id="21t-6M-XR2"/>
+                        <outletCollection property="buttons" destination="xsH-4l-uhu" collectionClass="NSMutableArray" id="Obu-2a-J8D"/>
+                        <outletCollection property="buttons" destination="yCQ-dw-R3U" collectionClass="NSMutableArray" id="UPz-Nk-AWJ"/>
+                        <outletCollection property="buttons" destination="C1B-ey-OcI" collectionClass="NSMutableArray" id="tTw-WC-vp4"/>
+                        <outletCollection property="buttons" destination="rM2-hE-Qum" collectionClass="NSMutableArray" id="Upl-Dx-3CZ"/>
+                        <outletCollection property="buttons" destination="nbe-7N-DWH" collectionClass="NSMutableArray" id="hZU-vi-H5k"/>
+                        <outletCollection property="buttons" destination="q9l-5x-ahU" collectionClass="NSMutableArray" id="uyJ-z1-s9c"/>
+                        <outletCollection property="buttons" destination="MaL-EM-iL2" collectionClass="NSMutableArray" id="NsC-jj-piG"/>
+                        <outletCollection property="buttons" destination="ukD-ye-uhZ" collectionClass="NSMutableArray" id="unE-y7-8Uq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
